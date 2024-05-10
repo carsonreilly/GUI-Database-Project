@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController"> 
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="21.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connections Detail" />
+            <Text layoutX="22.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DB URL Properties" />
+            <Text layoutX="22.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Properties" />
+            <Text layoutX="21.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+            <Text layoutX="23.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+            <ComboBox id="urlProperties" fx:id="urlProperties" layoutX="131.0" layoutY="39.0" prefWidth="150.0" />
+            <ComboBox id="userProperties" fx:id="userProperties" layoutX="121.0" layoutY="72.0" prefWidth="150.0" />
+            <TextField id="usernameBox" fx:id="usernameBox" layoutX="89.0" layoutY="103.0" />
+            <TextField id="passwordBox" fx:id="passwordBox" layoutX="89.0" layoutY="137.0" />
+            <Button id="connect" fx:id="connect" layoutX="24.0" layoutY="177.0" mnemonicParsing="false" onAction="#connect" text="Connect To Database" />
+            <Button id="disconnect" fx:id="disconnect" layoutX="170.0" layoutY="177.0" mnemonicParsing="false" onAction="#disconnect" text="Disconnect From Database" />
+            <Label id="connectionLine" fx:id="connectionLine" layoutX="24.0" layoutY="215.0" prefHeight="18.0" prefWidth="651.0" />
+            <Text layoutX="369.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter an SQL Command" />
+            <Button id="clear" fx:id="clear" layoutX="370.0" layoutY="176.0" mnemonicParsing="false" onAction="#clear" prefHeight="31.0" prefWidth="139.0" text="Clear SQL Command" />
+            <Button id="execute" fx:id="execute" layoutX="522.0" layoutY="177.0" mnemonicParsing="false" onAction="#execute" text="Execute SQL Command" />
+            <TextArea id="commandEntry" fx:id="commandEntry" layoutX="369.0" layoutY="38.0" prefHeight="128.0" prefWidth="305.0" />
+            <TableView id="table" fx:id="table" layoutX="21.0" layoutY="274.0" prefHeight="275.0" prefWidth="657.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+            <Text layoutX="25.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SQL Execution Result Window" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
